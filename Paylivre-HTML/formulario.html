@@ -1,0 +1,304 @@
+        <!--
+            Block content (div)
+            action 
+            method (get - padrão)
+        -->
+        <!--https://meusite.com.br/?home=camilaxavier&idade=20-->
+
+
+        <br>
+        <br>
+        <form id="form-contato" method="post" enctype="multipart/form-data">
+        <fieldset name="contato" form="form-contato">
+        <legend>
+            Preencha o formulário de contato
+        </legend>
+        <br>
+        <!-- Button -->
+        <button type="submit" disabled>Enviar</button>
+        <button type="reset" disabled>Limpar</button>
+        <button type="button" disabled id="atributos" name="atributos" class="atributos">Atributos</button>
+        <br>
+        <br>
+        </fieldset>
+
+
+        <!-- Label -->
+        <!--
+            Label
+            * Associar e identificar uma ou mais tags de entrada de dados
+            * Ajuda bastante na acessibilidade
+            Atributos:
+                - for
+                    * Usado para fazer a conexão com outros tipos de elementos de formulários
+        -->
+        </form>
+        <br>
+        <br>
+        <form action="submit">
+        <fieldset>
+        <legend>Preencha o formulário de contato</legend>
+        <br>
+        <label>
+        Nome:
+        <input type="text" id="nome" disabled>
+        </label>
+        <label for="age">
+            <br>
+            <br>
+        Idade:
+        </label>
+        <input type="number" id="age" disabled>
+        <!--
+            <datalist>
+            * Lista de valores com sugestões para algum elemento input
+            * Usuário poderá selecionar um dos valores ou colocar novos valores
+        -->
+        <br>
+        <br>
+        <strong>Lista</strong>
+        <datalist id="prof-list">
+            <option>Luan</option>
+            <option>Jenifer</option>
+            <option>Regis</option>
+            </datalist>
+            <br>
+            <br>
+            <input type="text" list="prof-list" placeholder="Lista de professores" disabled>
+            <br>
+            <br>
+        </fieldset>
+        <br>
+        <br>
+
+        <fieldset>
+        <legend>Trabalhando com Inputs</legend>
+        
+        <!--Input text-->
+        <br>
+        <input 
+        type="text"
+        placeholder="Preencha seu nome"
+        size="30"
+        minlength="8"
+        maxlength="20"
+        title="Você precisa colocar mais do que 8 caracteres e menos do que 20 caracteres."
+        required
+        disabled
+        readonly>
+        <br>
+
+        <!--Input number-->
+        <br>
+        <br>
+        <input 
+        type="number"
+        placeholder="Digite um número "
+        size="30"
+        minlength="2"
+        maxlength="2"
+        title="Você precisa colocar mais do que 8 caracteres e menos do que 20 caracteres." 
+        disabled>
+        <br>
+
+        <!--Input email-->
+        <br>
+        <br>
+        <input 
+        type="email"
+        placeholder="Preencha seu email"
+        size="30"
+        title="Digite seu e-mail"
+        disabled>
+        <br>
+
+        <!--Input senha-->
+        <br>
+        <br>
+        <input 
+        type="password"
+        placeholder="Preencha com sua senha"
+        size="30"
+        title="Digite sua senha"
+        disabled>
+        <br>
+
+        <!--Input Pattern-->
+        <br>
+        <br>
+        <input 
+        type="password"
+        placeholder="Digite os seus dados"
+        size="30"
+        title="Sua senha precisa ser em hexadecimal"
+        pattern="[0-9a-fA-F]{4,8}"
+        inputmode="numeric"
+        disabled>
+
+        <!--Input Hidden-->
+        <br>
+        <br>
+        <input type="hidden" value="Eu estou escondido =)">
+
+        <!--Input Color-->
+        <input type="color">
+
+        <br>
+        <br>
+        </fieldset>
+        <br>
+        <br>
+        <fieldset>
+        <legend>Trabalhando com Inputs</legend>
+        <label for="area">Seu interesse maior é por qual área?</label>
+        <br>
+        <br>
+        <div>
+            <input 
+            type="checkbox" 
+            name="interesse" 
+            id="frontend"
+            value="Front-End Luan Monteiro"
+            checked> 
+            Front-End Luan Monteiro
+            
+            <input 
+            type="checkbox" 
+            name="interesse" 
+            id="backend" 
+            value="Back-End Regis Santos"> 
+            Back-End Regis Santos
+            
+            <input 
+            type="checkbox" 
+            name="interesse" 
+            id="designuiux" 
+            value="Design UI/UX Jenifer Vieira"> Design UI/UX Jenifer Vieira
+        </div>
+        <br>
+        <br>
+        
+        <!--Interesses = Front-End Luan Monteiro, Back-End Regis Santos, Design UX/UI Jeniver Vieira... -->
+        <!--Radio Button-->
+        <h2>Deseja receber notificacão da be.academy?</h2>
+        <label for="yes">Sim</label>
+         <input type="radio" id="yes" value="yes" name="notification" checked>       
+        <label for="not">Não</label>
+        <input type="radio" id="not" value="not" name="notification">
+        <br>
+        <br>
+        </fieldset>
+
+        <br>
+        <br>
+        <fieldset>
+        <legend>Select</legend>
+        <!--Elemento de formulário capaz de criar uma lista de opcoes a selecionados, DropDown-->
+        <!--
+            Input Search
+            * Elemento usado para pesquisar conteúdo
+            * Parecido com o campo "text" pode receber atributos e comportamentos
+        -->
+         <!--select-teacher = ['Luan Santos', 'Moacir Garcia']-->
+        <label for="teacher"><strong>Professores</strong></label>
+        <br>
+        <br>
+        <select name="select-teacher" id="teacher" multiple size="5">
+            <option value="">Selecione um professor</option>
+            <option value="Luan Santos">Luan Santos</option>
+            <option value="Moacir Garcia">Moacir Garcia</option>
+            <option value="Jenifer Vieira">Jenifer Vieira</option>
+            <option value="Regis Eduardo">Regis Eduardo</option>
+        </select>
+        <br>
+        <br>
+        <input 
+            type="search" 
+            name="" 
+            title="Busque por um ID de até 3 dígitos" 
+            placeholder="Faca uma pesquisa" 
+            size="24"
+            pattern="[0-9]{0,3}"
+            required>
+            <button type="submit">OK</button>
+        </fieldset>
+
+        <!--Manipulando arquivos-->
+
+        <!-- Manipulando arquivos com o file
+            * Usuário poderá fazer um upload de 1 arquivo ou mais arquivos de acordo com a extensão
+        -->
+        <br>
+        <br>
+        <fieldset>
+            <legend>Files</legend>
+            <br>
+            <input type="file" 
+            value="" 
+            accept="image/*"
+            multiple
+            name=""
+            id="">
+            <br>
+            <br>
+        </fieldset>
+
+        <br>
+        <br>
+        <br>
+
+            <!--    
+                <textarea>
+                    * Elemento de texto com mais de 1 linha
+                    * Muito utilizado em textos maiores
+            -->
+        <fieldset>
+            <legend>Text Area</legend>
+            <br>
+            <label for="message"><strong>Mensagem</strong></label>
+            <br>
+            <br>
+            <textarea 
+            name="message" 
+            id="message" 
+            cols="30" 
+            rows="10"
+            maxlength="100"
+            minlength="30"
+            wrap="soft"></textarea>
+        </fieldset>
+        <br>
+        <br>
+        <br>
+        
+        <!--
+                <optgroup>
+                    * Elemento utilizado para agrupar uma sequência de selecoes ou opcoes
+        -->
+        <fieldset>
+            <legend>Opt group</legend>
+            <br>
+            <label for="message"><strong>Escolha seu professor</strong></label>
+            <br>
+            <br>
+            <select name="prof" multiple>
+                <optgroup label="Professores">
+                    <option value="Luan" disabled>Luan</option>
+                    <option value="Jenife">Jenife</option>
+                    <option value="Roger">Roger</option>
+                    <option value="Moacir">Moacir</option>
+                </optgroup>
+                <optgroup label="Cursos">
+                    <option value="">Front-End</option>
+                    <option value="">Back-End</option>
+                    <option value="">Design UX/UI</option>
+                    <option value="">DevOps</option>
+                </optgroup>
+            </select>
+            <br>
+            <br>
+        </fieldset>
+        <br>
+        <br>
+        <br>
+        </form>
